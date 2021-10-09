@@ -1,0 +1,28 @@
+.form-for-user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading-user {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+
+.button-user {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.user-input {
+    border: 1px solid transparent;
+    background: #F0F0F0;
+}
+
+.user-input:hover {
+   background-color: white;
+     border: 1px solid;
+     border-color: #898468;
+}

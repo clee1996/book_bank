@@ -1,0 +1,30 @@
+.homepage-header {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #A5A0AA;
+
+}
+
+.homepage-links {
+ display: flex;
+ justify-content: space-around;
+ margin-top:15px;
+}
+
+.gif-image {
+  margin: auto;
+  display: block;
+  width: 50%;
+
+}

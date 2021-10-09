@@ -1,0 +1,44 @@
+version: "3.9"
+services:
+  db:
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: entertainment
+    image: "postgres:alpine"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  backend:
+    container_name: backend
+    build: .
+    depends_on:
+      - db
+    environment:
+      FLASK_ENV: development
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://postgres:postgres@db:5432/entertainment
+    volumes:
+      - .:/project
+    ports:
+      - "5000:5000"
+    restart: "always"
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+
+volumes:
+  db-data:
+
+
+
+
