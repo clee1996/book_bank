@@ -1,4 +1,4 @@
-![Alt Text](https://media.giphy.com/media/8J2MOphsMnQUo/giphy-downsized-large.gif)
+![Cat Gif](https://media.giphy.com/media/8J2MOphsMnQUo/giphy-downsized-large.gif)
 
 # What Problem Was It Solving/ Purpose of this Project
 

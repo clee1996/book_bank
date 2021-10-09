@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import {useAuthState} from '../context/index.js'
 import {useLocation, useHistory} from 'react-router-dom'
@@ -18,6 +18,10 @@ interface stateType {
 
 
 const EditForm = () => {
+
+  const [isSuccessful, setSuccess] = useState<boolean>(false)
+
+
   const user = useAuthState()
   const location = useLocation()
   const state = location.state as stateType
@@ -42,6 +46,8 @@ const EditForm = () => {
         headers: {'X-CSRF-TOKEN': cookieValue()},
         credentials: 'include'
       })
+      setSuccess(true)
+
     }
     submit()
 
@@ -57,6 +63,7 @@ const EditForm = () => {
         <label>Title:</label><input type="text"name="title" defaultValue={book.title}/>
         <label>Synopsis:</label><textarea name="synopsis" defaultValue={book.synopsis}/>
         <button className="button-form-label"type="submit">Submit</button>
+        {isSuccessful ? <div>Success</div> : null}
       </form>
     </div>
   )
