@@ -70,6 +70,7 @@ if (fetchedStatus === false) {
     <div>
       <h1 className="edit-header">Edit or Delete a Book</h1>
       <Link to="/greeting"><button>Home</button></Link>
+      <div className = "entire-book-column">
       <div className="column-name">
         <div>Title</div>
         <div>Author</div>
@@ -84,6 +85,7 @@ if (fetchedStatus === false) {
           <button onClick={(event) => handleClick(event, book.id, idx)}>Delete</button>
         </div>
       ))}
+      </div>
     </div>
 
 

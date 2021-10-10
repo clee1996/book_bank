@@ -11,6 +11,10 @@
   border-color: #C0C0C0
 }
 
+.individual-book > * {
+flex: 1;
+}
+
 .spinner {
   display: flex;
   justify-content: center;
@@ -19,5 +23,12 @@
 }
 
 .column-name {
+  width: 50%;
   display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.entire-book-column {
+  margin-top: 50px;
 }

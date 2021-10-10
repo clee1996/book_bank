@@ -25,12 +25,10 @@
 * React
 * React-Router-Dom
 
-
-## Discuss Authorization and Authentication and how that was implemented along with protected API endpoints. For example, using JWT tokens and firstly implementing them into localStorage but realizing that could be a security issue and by having access to JavaScript someone can get access to the token.
-
 ## Go into some challenges that were introduced with this project
 
-1. Circular Import Errors and restructuring backend files.
-2. How to let the frontend know that a user is logged in… learning React Context Api and useReducer
+1. Authentication and how that was implemented.
+2. Circular Import Errors and restructuring backend files.
+3. How to let the frontend know that a user is logged in… learning React Context Api and useReducer
 
 
