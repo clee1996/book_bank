@@ -75,6 +75,7 @@ def register():
 
 
 @routes.route('/logout', methods=['POST'])
+@jwt_required()
 def logout():
     resp = jsonify({"logout": True})
     unset_jwt_cookies(resp)

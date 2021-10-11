@@ -1,4 +1,5 @@
 import regeneratorRuntime from "regenerator-runtime";
+import {cookieValue} from './helperfuncs.js'
 
 export async function loginUser(dispatch, loginPayload) {
   const requestOptions = {
@@ -29,7 +30,10 @@ export async function loginUser(dispatch, loginPayload) {
 }
 
 export async function logout(dispatch) {
-  let resp = await fetch("http://localhost:5000/api/logout", {method: "POST"})
+  let resp = await fetch("http://localhost:5000/api/logout",
+    {method: "POST",
+      headers: {'X-CSRF-TOKEN': cookieValue()},
+      credentials: 'include'})
   localStorage.removeItem("currentUser")
   localStorage.removeItem("loggedIn")
   dispatch({ type: 'LOGOUT' });

@@ -91,7 +91,7 @@ const submit = async (data: Data) => {
   return(
     <div>
       <h1 className="heading-user">Welcome to the Book Bank</h1>
-      <form className="form-for-user" onSubmit={handleSubmit}>
+      <form className="form-for-user" onSubmit={handleSubmit} autoComplete="off">
         <label>Username:</label><input className="user-input"type="text" name="username"></input>
         <label>Password:</label><input className="user-input"type="password" name="password"></input>
         <button className="button-user" type="submit">Login</button>
@@ -104,7 +104,7 @@ const submit = async (data: Data) => {
     return(
       <div>
         <h1 className="heading-user">Welcome to the Book Bank</h1>
-        <form className= "form-for-user"onSubmit={registerSubmit}>
+        <form className= "form-for-user"onSubmit={registerSubmit} autoComplete="off">
           <label>Username:</label><input className="user-input" type="text" name="username"/>
           <label>Password:</label><input className="user-input"type="password" name="password"/>
           <button className="button-user" type="submit" >Signup</button>
