@@ -71,12 +71,12 @@ if (fetchedStatus === false) {
       <h1 className="edit-header">Edit or Delete a Book</h1>
       <Link to="/greeting"><button>Home</button></Link>
       <div className = "entire-book-column">
-      <div className="column-name">
+        {listOfBooks.length ? <div className="column-name">
         <div>Title</div>
         <div>Author</div>
         <div>Synopsis</div>
-      </div>
-      {listOfBooks.map((book, idx) => (
+        </div> : null}
+      {listOfBooks.length ? listOfBooks.map((book, idx) => (
         <div className="individual-book" key={idx}>
           <div>{book.title}</div>
           <div>{book.author}</div>
@@ -84,7 +84,7 @@ if (fetchedStatus === false) {
           <Link to={{pathname: "/editformforbooks", state: {book: book}}}>Edit</Link>
           <button onClick={(event) => handleClick(event, book.id, idx)}>Delete</button>
         </div>
-      ))}
+      )) : <div className="book-message">Add Some Books</div>}
       </div>
     </div>
 

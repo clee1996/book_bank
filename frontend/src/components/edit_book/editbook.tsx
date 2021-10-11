@@ -58,7 +58,7 @@ const EditForm = () => {
     <div>
       <h1 className="post-header">Edit this Book</h1>
       <Link to="/books"><button>Back</button></Link>
-      <form className="post-form" onSubmit={handleSubmit}>
+      <form className="post-form" onSubmit={handleSubmit} autoComplete="off">
         <label>Author:</label><input type="text" name="author" defaultValue={book.author}/>
         <label>Title:</label><input type="text"name="title" defaultValue={book.title}/>
         <label>Synopsis:</label><textarea name="synopsis" defaultValue={book.synopsis}/>

@@ -32,3 +32,9 @@ flex: 1;
 .entire-book-column {
   margin-top: 50px;
 }
+
+.book-message {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}

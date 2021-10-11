@@ -40,7 +40,7 @@ const Form = () => {
     <div>
       <h1 className="post-header">Put Your Favorite Books in Our Database!</h1>
       <Link to ="/greeting"><button>Back</button></Link>
-      <form onSubmit={handleSubmit} className="post-form">
+      <form onSubmit={handleSubmit} className="post-form" autoComplete="off">
         <label>Author:</label><input type="text" name="author"></input>
         <label>Title:</label><input type="text" name="title"></input>
         <label>Synopsis:</label><textarea name="synopsis"></textarea>
